@@ -18,10 +18,12 @@ namespace SingletonPattern.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly Feeling _feeling;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, Feeling feeling)
         {
             _logger = logger;
+            _feeling = feeling;
         }
 
 
@@ -38,10 +40,9 @@ namespace SingletonPattern.Controllers
                 new ParameterizedThreadStart((state) =>
                 {
                     //WeatherForecast.GetInstance();
-                    
+
                     // 此刻的心情
-                    Feeling feeling = new Feeling();
-                    Console.WriteLine(feeling.Date);
+                    Console.WriteLine(_feeling.Date);
                 })
                 );
                 th.Start(i);
