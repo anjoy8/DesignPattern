@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FactoryPattern.Repository.EFCore\FactoryPattern.Repository.EFCore.csproj" />
+    <ProjectReference Include="..\FactoryPattern.Repository.Sugar\FactoryPattern.Repository.Sugar.csproj" />
+  </ItemGroup>
+
+</Project>
